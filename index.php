@@ -18,7 +18,7 @@ if(Session::exists('success')){
          <button class="btn btn-default"><a href="http://localhost/portfolio/">Back</a></button>
     </div>
   <div>
-  	<h2><a href="http://localhost/portfolio/ooplg/register">You have to Register</a></h2>
+  	<h2><a href="http://localhost/portfolio/ooplg/register">You have to Register or Login</a></h2>
   </div>
 </body>
 </html>
