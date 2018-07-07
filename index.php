@@ -19,6 +19,7 @@ if(Session::exists('home')){
     </div>
   <div>
   	<h2><a href="http://localhost/portfolio/ooplg/register">Register</a></h2>
+  	<h2><a href="http://localhost/portfolio/ooplg/login">Log in</a></h2>
   </div>
 </body>
 </html>
