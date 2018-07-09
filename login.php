@@ -12,6 +12,15 @@ if(Input::exists()) {
 
 		if($validation->passed()){
 			// Log user in
+			$user = new User();
+			$login = $user->login(Input::get('username'), Input::get('password'));
+
+			if($login){
+				Redirect::to('index.php');
+			} else {
+				echo 'Sorry. Login in failed!!!';
+			}
+
 		} else {
 			foreach ($validation->errors() as $error) {
 				echo '<h4 style="color:white;">' . ucfirst($error),  '</h4><br>';
