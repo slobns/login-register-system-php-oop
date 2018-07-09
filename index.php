@@ -15,7 +15,7 @@ if(Session::exists('home')){
 </head>
 <body>
 	<div>
-         <button class="btn btn-default"><a href="http://localhost/portfolio/">Back</a></button>
+         <button class="btn btn-default"><a href="http://localhost/portfolio/#services">Back</a></button>
     </div>
   <div>
   	<h2><a href="http://localhost/portfolio/ooplg/register">Register</a></h2>
