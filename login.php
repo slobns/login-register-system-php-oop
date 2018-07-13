@@ -61,6 +61,9 @@ if(Input::exists()) {
 	</style>
 </head>
 <body>
+	<div>
+    		<button class="btn btn-default"><a href="http://localhost/portfolio/ooplg/index.php">Back</a></button>
+    	</div>
 <div class="container">
     <div class="row centered-form">
       <div class="col-xs-12 col-sm-8 col-md-4 col-sm-offset-2 col-md-offset-4">
