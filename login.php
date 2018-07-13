@@ -13,7 +13,9 @@ if(Input::exists()) {
 		if($validation->passed()){
 			// Log user in
 			$user = new User();
-			$login = $user->login(Input::get('username'), Input::get('password'));
+
+			$remember = (Input::get('remember') === 'on') ? true : false;
+			$login = $user->login(Input::get('username'), Input::get('password'), $remember);
 
 			if($login){
 				Redirect::to('index.php');
@@ -82,7 +84,13 @@ if(Input::exists()) {
 			    					<input type="password" name="password" id="password" class="form-control input-sm"  placeholder="Password">
 			    				</div>
 			    			</div>
-			    				
+			    		</div>
+			    		<div class="checkbox">
+			    				<label for="remember">
+			    					<input type="checkbox" name="remember" id="remember"> Remember me
+			    				</label>
+			    		</div>
+			    	
 			    	<input type="hidden" name="token" value="<?php echo Token::generate(); ?>">
 			    	<input type="submit" value="Login" class="btn btn-info btn-block">
 			    		

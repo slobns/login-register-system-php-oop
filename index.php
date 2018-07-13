@@ -16,7 +16,9 @@ $user = new User();
 <head>
 	<title>Blog</title>
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<style type="text/css">
+	<style type="text/css" class="cp-pen-styles">
+
+
 		.navbar-default {
     background: rgba(45, 100, 222, .98);
     
@@ -45,7 +47,7 @@ $user = new User();
 
 .navbar-default .navbar-nav>li>a {
     color: #fff; 
-}
+ 
 	</style>
 </head>
 <body>
@@ -69,20 +71,19 @@ $user = new User();
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <?php 
-           if($user->isLoggedIn()){
+           if(!$user->isLoggedIn()){
         ?>
-         <li><a href="index/<?php echo escape($user->data()->username); ?>"><?php echo escape($user->data()->username); ?></a></li>
-         <li><a href="http://localhost/portfolio/ooplg/logout.php">Log Out</a></li>
+        
+         <li><a href="login.php">Log in</a></li>
+         <li><a href="register.php">Register</a></li>
         <?php
         } else {
-?>
-          <li><a href="http://localhost/portfolio/ooplg/login">Log In</a></li>
-        <?php  
+         ?>  
+          <li><a href="#"><?php echo escape($user->data()->username); ?></a></li>
+          <li><a href="logout.php">Log Out</a></li>
+          <?php
         }
-          ?>
-        
-        
-          <li><a href="http://localhost/portfolio/ooplg/register">Register</a></li>
+      ?>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
