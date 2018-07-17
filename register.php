@@ -70,7 +70,7 @@ if(Input::exists()){
 	<style type="text/css">
 		body{
 
-		      background: url('http://localhost/portfolio/img/bg-callout.jpg') no-repeat center center fixed; 
+		      background: url('http://www.slobns.com/img/bg-callout.jpg') no-repeat center center fixed; 
 		     -webkit-background-size: cover;
 		     -moz-background-size: cover;
 		     -o-background-size: cover;
@@ -92,7 +92,7 @@ if(Input::exists()){
 </head>
 <body>
 	<div>
-    		<button class="btn btn-default"><a href="http://localhost/portfolio/ooplg/index.php">Back</a></button>
+    		<button class="btn btn-default"><a href="http://www.slobns.com/">Back</a></button>
     	</div>
     <div class="container">
         <div class="row centered-form">

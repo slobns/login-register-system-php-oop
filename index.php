@@ -62,7 +62,7 @@ $user = new User();
                <span class="icon-bar"></span>
                <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" style="color: snow;" href="http://localhost/portfolio/">Portfolio</a>
+      <a class="navbar-brand" style="color: snow;" href="http://www.slobns.com/">Portfolio</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->

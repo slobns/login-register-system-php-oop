@@ -47,12 +47,16 @@ class User {
     	return false;
 
     }
-	public function login($username = null, $password = null, $remember) {
-        $user = $this->find($username); 
+	public function login($username = null, $password = null, $remember = false) {
        
-        if($user) {
-        	if($this->data()->password === Hash::make($password, $this->data()->salt)) {
-                 Session::put($this->_sessionName, $this->data()->id);
+        if(!$username && !password && $this->exists()){
+           Session::put($this->_sessionName, $this->data()->id);
+        } else {
+            $user = $this->find($username); 
+        
+            if($user) {
+            	if($this->data()->password === Hash::make($password, $this->data()->salt)) {
+                     Session::put($this->_sessionName, $this->data()->id);
 
                  if($remember){
                     $hash = Hash::unique();
@@ -73,20 +77,24 @@ class User {
                  return true;
         	}
         }
+    }
         return false;
 	}
 
     public function data() {
 		return $this->_data;
 	}
-
+    
+    public function exists() {
+        return (!empty($this->_data)) ? true : false;
+    }
     public function isLoggedIn() {
         return $this->_isLoggedIn;
     }
 
     public function logout() {
 
-        $this->_db->delete('user_session', array('user_id', '=',$this->data()->id));
+        $this->_db->delete('user_session', array('user_id', '=', $this->data()->id));
 
         Session::delete($this->_sessionName);
         Cookie::delete($this->_cookieName);
