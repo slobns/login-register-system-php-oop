@@ -62,7 +62,7 @@ $user = new User();
                <span class="icon-bar"></span>
                <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" style="color: snow;" href="http://www.slobns.com/">Portfolio</a>
+      <a class="navbar-brand" style="color: snow;" href="http://localhost/portfolio/ooplg">Portfolio</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -79,13 +79,18 @@ $user = new User();
         <?php
         } else {
          ?>  
+
           <li><a href="#"><?php echo escape($user->data()->username); ?></a></li>
           <li><a href="logout.php">Log Out</a></li>
+          <li><a href="update.php">Update Detail</a></li>
+
+
           <?php
         }
       ?>
       </ul>
     </div><!-- /.navbar-collapse -->
+   
   </div><!-- /.container-fluid -->
 </nav>
 </body>
