@@ -63,7 +63,7 @@ $user = new User();
                <span class="icon-bar"></span>
                <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" style="color: snow;" href="http://localhost/portfolio/ooplg">Portfolio</a>
+      <a class="navbar-brand" style="color: snow;" href="http://localhost/portfolio">Portfolio</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -74,7 +74,6 @@ $user = new User();
         <?php 
            if(!$user->isLoggedIn()){
         ?>
-        
          <li><a href="login.php">Log in</a></li>
          <li><a href="register.php">Register</a></li>
         <?php
@@ -86,9 +85,7 @@ $user = new User();
           <li><a href="update.php">Update Detail</a></li>
           <li><a href="changepassword.php">Change Password</a></li>
           <?php
-          if($user->hasPermission('moderator')) {
-             echo '<p>You are an moderator.</p>';
-        }
+          
         }
       ?>
       </ul>
@@ -96,5 +93,13 @@ $user = new User();
    
   </div><!-- /.container-fluid -->
 </nav>
+<div style="padding-top: 100px;">
+  <p>Hello <a href="profile.php?user=<?php echo escape($user->data()->username);?>"><?php echo escape($user->data()->username);?></a>!</p>
+  <?php
+     if($user->hasPermission('moderator')) {
+             echo '<p>Welcome on our site. You are an moderator.</p>';
+           }
+  ?>
+</div>
 </body>
 </html>
