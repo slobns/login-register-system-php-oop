@@ -16,6 +16,7 @@ $user = new User();
 <head>
 	<title>Blog</title>
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 	<style type="text/css" class="cp-pen-styles">
 
 
@@ -85,6 +86,9 @@ $user = new User();
           <li><a href="update.php">Update Detail</a></li>
           <li><a href="changepassword.php">Change Password</a></li>
           <?php
+          if($user->hasPermission('moderator')) {
+             echo '<p>You are an moderator.</p>';
+        }
         }
       ?>
       </ul>

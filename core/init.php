@@ -7,7 +7,7 @@ $GLOBALS['config'] = array(
          'host' => 'localhost',
          'username' => 'root',
          'password' => '',
-         'db' => 'youtubephp'
+         'db' => ''
       
     ),
     'remember' => array(
