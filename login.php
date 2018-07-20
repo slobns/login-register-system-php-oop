@@ -20,7 +20,7 @@ if(Input::exists()) {
 			if($login){
 				Redirect::to('index.php');
 			} else {
-				echo 'Sorry. Login in failed!!!';
+				echo '<h3 style="color:white;">Sorry.Login in failed!!!</h3>';
 			}
 
 		} else {
@@ -64,7 +64,7 @@ if(Input::exists()) {
 </head>
 <body>
 	<div>
-    		<button class="btn btn-default"><a href="http://www.slobns.com/">Back</a></button>
+    		<button class="btn btn-default"><a href="http://localhost/portfolio/ooplg">Back</a></button>
     	</div>
 <div class="container">
     <div class="row centered-form">
@@ -90,7 +90,7 @@ if(Input::exists()) {
 			    					<input type="checkbox" name="remember" id="remember"> Remember me
 			    				</label>
 			    		</div>
-			    	
+			    	   
 			    	<input type="hidden" name="token" value="<?php echo Token::generate(); ?>">
 			    	<input type="submit" value="Login" class="btn btn-info btn-block">
 			    		

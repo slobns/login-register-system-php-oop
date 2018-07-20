@@ -83,8 +83,7 @@ $user = new User();
           <li><a href="#"><?php echo escape($user->data()->username); ?></a></li>
           <li><a href="logout.php">Log Out</a></li>
           <li><a href="update.php">Update Detail</a></li>
-
-
+          <li><a href="changepassword.php">Change Password</a></li>
           <?php
         }
       ?>

@@ -5,9 +5,9 @@ session_start();
 $GLOBALS['config'] = array(
     'mysql' => array(
          'host' => 'localhost',
-         'username' => '',
+         'username' => 'root',
          'password' => '',
-         'db' => ''
+         'db' => 'youtubephp'
       
     ),
     'remember' => array(
