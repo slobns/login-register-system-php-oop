@@ -94,11 +94,15 @@ $user = new User();
   </div><!-- /.container-fluid -->
 </nav>
 <div style="padding-top: 100px;">
+  <?php
+  if($user->isLoggedIn()){
+    ?>
   <p>Hello <a href="profile.php?user=<?php echo escape($user->data()->username);?>"><?php echo escape($user->data()->username);?></a>!</p>
   <?php
-     if($user->hasPermission('moderator')) {
-             echo '<p>Welcome on our site. You are an moderator.</p>';
+     if($user->hasPermission('admin')) {
+             echo '<p>Welcome on our site. You are an administrator.</p>';
            }
+         }
   ?>
 </div>
 </body>
